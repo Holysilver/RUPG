@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="APIManager.js"></script>
     <script src="Renderer.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 </head>
 
 <body>
@@ -32,9 +33,9 @@
 
 
     <script id="user-template" type="text/x-handlebars-template">   
-        <img id="profile-pic" src="{{user.picture.medium}}"> 
-        <p id="user-info">{{user.name.first}} {{user.name.last}}
-            {{user.location.city}}, {{user.location.country}}
+        <img id="profile-pic" src="{{picture.thumbnail}}"> 
+        <p id="user-info">{{name.first}} {{name.last}}
+            {{location.city}}, {{location.country}}
         </p>
 
       </script>
