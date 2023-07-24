@@ -28,17 +28,15 @@
             <div class="friends-container">	
             </div>	
         </div>
-        <button class="buttons">Generate User</button>
+        <button class="buttons" id="gen-page">Generate User</button>
     </div>
 
 
     <script id="user-template" type="text/x-handlebars-template">   
-        <img id="profile-pic" src="{{picture.thumbnail}}"> 
-        <p id="user-info">{{name.first}} {{name.last}}
-            {{location.city}}, {{location.country}}
-        </p>
+        <img id="profile-pic" src="{{picture.medium}}">
+        <span class="user-info"> {{name.first}} {{name.last}} <br>{{location.city}}, {{location.country}}</span>
+    </script>
 
-      </script>
     <script id="friends-template" type="text/x-handlebars-template">   
         <ul>
             {{#each friends}}
@@ -47,10 +45,26 @@
                 </li>
             {{/each}}
         </ul>
+    </script>
 
-      </script>
+    <script id="quote-template" type="text/x-handlebars-template">  
+        <p>Favorite quote:</p>
+        {{quote}}
+    </script>
 
-      <script src="main.js"></script>
+    <script id="pokemon-template" type="text/x-handlebars-template">  
+        <img id="pokemon-image" src="{{sprites.front_default}}">
+        <div id="pokemon-text">
+            Favorite Pokemon: {{name}}
+        </div>
+    </script>
+
+    <script id="meat-template" type="text/x-handlebars-template">  
+        <p>About me</p>
+        <p class="meat-text">{{meatIpsum}}</p>
+    </script>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
